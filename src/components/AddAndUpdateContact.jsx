@@ -10,7 +10,7 @@ const contactSchemaValidation = Yup.object().shape({
   email : Yup.string().email("Invalid Email").required("Email is Required"),
 })
 
-function AddAndUpdateContact({isOpen,onClose ,isUpdate,contact}) {
+ const AddAndUpdateContact=({isOpen,onClose ,isUpdate,contact}) =>{
 
   const addContact =async(contact)=> {
     try {
@@ -47,11 +47,11 @@ function AddAndUpdateContact({isOpen,onClose ,isUpdate,contact}) {
                initialValues={
                 isUpdate 
                 ? {
-                name: contact.name,
+                 name: contact.name,
                  email:contact.email,
                }
                 :{
-                  name: "",
+                  name:"",
                   email:"",
                 } 
                }

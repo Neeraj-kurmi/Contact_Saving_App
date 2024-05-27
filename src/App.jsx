@@ -10,7 +10,7 @@ import { ToastContainer, toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
 import NotFoundContact from "./components/NotFoundContact";
 
-function App() {
+const  App= () =>{
   
   const [contacts,setcontacts]=useState([]);
 
@@ -34,7 +34,7 @@ function App() {
         })
 
       } catch (error) {
-          // console.log(error)
+          console.log(error)
       }
     }
     get_contacts();
